@@ -1047,7 +1047,7 @@ static FlutterError *getFlutterError(NSError *error) {
   if (matchDateComponents != nil) {
     if ([matchDateComponents integerValue] == Time) {
       NSDateComponents *dateComponents =
-          [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute |
+          [calendar components:(NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute |
                                 NSCalendarUnitSecond | NSCalendarUnitTimeZone)
                       fromDate:date];
       return [UNCalendarNotificationTrigger
